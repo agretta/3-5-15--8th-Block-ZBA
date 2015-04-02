@@ -4,8 +4,7 @@ public class Driver {
 	
 	public static void main(String args[]){
 		
-		System.out.println("Potato");
-		
+		FrontEnd frontEnd = new FrontEnd();
 	}
 	
 	
