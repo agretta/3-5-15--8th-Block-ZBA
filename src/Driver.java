@@ -3,10 +3,11 @@ public class Driver {
 
 	
 	public static void main(String args[]){
-		
-		FrontEnd frontEnd = new FrontEnd();
+		    javax.swing.SwingUtilities.invokeLater(new Runnable() {
+		        public void run() {
+		          FrontEnd front = new FrontEnd();
+		        }
+		    });
+		}
 	}
 	
-	
-	
-}
