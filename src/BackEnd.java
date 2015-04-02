@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 
 
+
 import com.sun.java_cup.internal.runtime.Scanner;
 import com.sun.xml.internal.bind.v2.schemagen.xmlschema.List;
 
@@ -43,7 +44,7 @@ public class BackEnd {
 	}
 	public List <String> getUsers()
 	{
-		String array = new ArrayList <String> ();
+		ArrayList<String> array = new ArrayList <String> ();
 		
 		
 		return array;
