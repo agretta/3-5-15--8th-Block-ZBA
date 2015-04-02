@@ -1,26 +1,34 @@
+import java.io.File;
 import java.util.ArrayList;
 
+
+
+
+import com.sun.java_cup.internal.runtime.Scanner;
 import com.sun.xml.internal.bind.v2.schemagen.xmlschema.List;
 
 
 public class BackEnd {
+	public File z;
+	Scanner scanner;
 	
-	
-	public BackEnd ()
+	public BackEnd (File f)
 	{
 		
-		
-		
+		Encoder encoder = new Encoder(f);
+		z = f;
 		
 	}
 	
 	public List <String>  getMessages(String username)
 	{
 		
-		ArrayList array1 = new ArrayList <String> ();
+		ArrayList messages = new ArrayList <String> ();
 		
 		
-		return array1;	
+		
+		
+		return messages;	
 		
 		
 		
@@ -28,6 +36,7 @@ public class BackEnd {
 	public void addMessage(String username, String msg)
 	{
 		
+		encoder.write(username + "	"+ msg);
 		
 		
 		
