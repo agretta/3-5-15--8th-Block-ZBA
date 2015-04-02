@@ -7,8 +7,8 @@ public class Encoder {
 	private static String target=" zyxwvutsrqponmlkjihgfedcbaQ9A8ZWS7XEDC6RFVT5GBY4HNU3J2MI1KO0LP\t";
 	
 	
-	public Encoder(){
-		myFile = new File("Message_Storage");
+	public Encoder(File f){
+		myFile = f;
 		
 		
 		
