@@ -2,8 +2,12 @@ import java.util.*;
 import java.io.*;
 public class Encoder {
 	
+	private File myFile;
+	
+	
+	
 	public Encoder(){
-		
+		myFile = new File("Message_Storage");
 		
 		
 		
