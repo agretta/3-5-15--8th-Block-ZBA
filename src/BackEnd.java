@@ -1,54 +1,86 @@
 import java.io.File;
 import java.util.ArrayList;
+import java.util.List;
 
 
 
 
 
-import com.sun.java_cup.internal.runtime.Scanner;
-import com.sun.xml.internal.bind.v2.schemagen.xmlschema.List;
 
 
-public class BackEnd {
-	public File z;
-	Scanner scanner;
+public class BackEnd {	//done
+	
+	
 	private Encoder encoder;
 	
 	public BackEnd (File f)
 	{
 		
 		encoder = new Encoder(f);
-		z = f;
+		
 		
 	}
 	
-	public List <String>  getMessages(String username)
+	public List <String>  getMessages(String username)   //done
 	{
 		
-		ArrayList messages = new ArrayList <String> ();
+		List <String> allMessages = new ArrayList<String> ();
+		List <String> Messages = new ArrayList<String> ();
+		
+		allMessages = encoder.read();
+		
+		for (String g : allMessages)
+		{
+			String[] split = g.split("=");
+			if (split[0].equals( username))
+				Messages.add(split[0]);
+				
+			
+		}
 		
 		
-		
-		
-		return messages;	
+		return Messages;	
 		
 		
 		
 	}
-	public void addMessage(String username, String msg)
+	public void addMessage(String username, String msg)	//done
 	{
 		
-		encoder.write(username + "	"+ msg);
+		encoder.write(username + "=" + msg);
 		
 		
 		
 	}
 	public List <String> getUsers()
 	{
-		ArrayList<String> array = new ArrayList <String> ();
+		ArrayList<String> usernames = new ArrayList <String> ();
+		List <String> allMessages = new ArrayList<String> ();
 		
 		
-		return array;
+		allMessages = encoder.read();
+		
+		for (String g : allMessages)
+		{
+			String[] split = g.split("=");
+			
+			
+			for (String x : usernames)
+			{ 
+				
+				if (x.equals(split[0]) == false);
+					usernames.add(split[0]);
+			}
+			
+		}
+		
+		
+		return usernames;	
+		
+		
+		
+		
+		
 	}
 public static void main(String args[]){
 		
