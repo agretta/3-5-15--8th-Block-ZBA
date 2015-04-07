@@ -33,7 +33,7 @@ public class BackEnd {	//done
 		{
 			String[] split = g.split("=");
 			if (split[0].equals( username))
-				Messages.add(split[0]);
+				Messages.add(split[1]);
 				
 			
 		}
