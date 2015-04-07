@@ -22,8 +22,6 @@ public class FrontEnd {
 	private BackEnd backEnd;
 	public FrontEnd () {
 		
-		backEnd = new BackEnd(new File("messages"));
-		
 		frame = new JFrame();
 		frame.setBounds(100, 100, 450, 380);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -48,58 +46,35 @@ public class FrontEnd {
 		txtAddUsername.setColumns(10);
 		
 		
-
+		
 		
 		JLabel lblMessage = new JLabel("Message");
 		lblMessage.setBounds(42, 102, 62, 14);
 		frame.getContentPane().add(lblMessage);
 		
-		txtTypeTheMessage = new JTextField();
-		txtTypeTheMessage.setBounds(42, 130, 120, 20);
-		frame.getContentPane().add(txtTypeTheMessage);
-		txtTypeTheMessage.setColumns(10);
-		
-		JComboBox<String> comboBox_1 = new JComboBox<String>();
-		comboBox_1.setBounds(134, 210, 28, 20);
-		frame.getContentPane().add(comboBox_1);
 		
 		
-	
 		
 		JLabel lblGetMessage = new JLabel("Get Message");
 		lblGetMessage.setBounds(42, 173, 120, 14);
 		frame.getContentPane().add(lblGetMessage);
 		
-		txtUsername = new JTextField();
-		txtUsername.setBounds(42, 210, 120, 20);
-		frame.getContentPane().add(txtUsername);
-		txtUsername.setColumns(10);
-		
-		
+		JComboBox<String > comboBox_1 = new JComboBox<String >();
+		comboBox_1.setBounds(42, 210, 120, 20);
+		frame.getContentPane().add(comboBox_1);
 		
 		txtMessage = new JTextField();
 		txtMessage.setBounds(42, 252, 370, 51);
 		frame.getContentPane().add(txtMessage);
 		txtMessage.setColumns(10);
 		
-		JComboBox comboBox_2 = new JComboBox();
-		comboBox_2.setBounds(134, 130, 28, 20);
+		JComboBox<String > comboBox_2 = new JComboBox<String >();
+		comboBox_2.setBounds(42, 130, 120, 20);
 		frame.getContentPane().add(comboBox_2);
 		
 		JComboBox comboBox_3 = new JComboBox();
 		comboBox_3.setBounds(134, 210, 28, 20);
 		frame.getContentPane().add(comboBox_3);
-		
-		JButton btnAddTheMessage = new JButton("Add message");
-		btnAddTheMessage.addActionListener(new ActionListener() {
-			
-			public void actionPerformed(ActionEvent arg0) {
-				
-				backEnd.addMessage(comboBox_1.getItemAt(comboBox_1.getSelectedIndex()), txtTypeTheMessage.getText());
-				
-				
-			}
-		});
 		
 		JButton btnAdd = new JButton("Add");
 		btnAdd.addActionListener(new ActionListener() {
@@ -108,17 +83,28 @@ public class FrontEnd {
 				comboBox_1.addItem(txtAddUsername.getText());
 				backEnd.addMessage(txtAddUsername.getText(), " ");
 				comboBox_2.addItem(txtAddUsername.getText());
-				
 			}
 		});
-	
 		
+		JButton btnAddTheMessage = new JButton("Add message");
+		btnAddTheMessage.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				
+				backEnd.addMessage(comboBox_1.getItemAt(comboBox_1.getSelectedIndex()), txtTypeTheMessage.getText());
+			}
+		});
 		btnAdd.setBounds(323, 64, 89, 23);
-	
 		frame.getContentPane().add(btnAdd);
 		btnAddTheMessage.setBounds(304, 129, 120, 23);
 		frame.getContentPane().add(btnAddTheMessage);
+		frame.pack();
+		frame.setVisible(true);
 	}
 
 
 }
+//	backEnd.addMessage(comboBox_1.getItemAt(comboBox_1.getSelectedIndex()), txtTypeTheMessage.getText());
+
+//comboBox_1.addItem(txtAddUsername.getText());
+//backEnd.addMessage(txtAddUsername.getText(), " ");
+//comboBox_2.addItem(txtAddUsername.getText());
