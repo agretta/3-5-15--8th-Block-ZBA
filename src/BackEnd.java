@@ -61,11 +61,8 @@ public class BackEnd {	//done
 		
 		for (String g : allMessages)
 		{
-			String[] split = g.split("=");
-			for (String x : usernames)
-			{ 	
-					usernames.add(split[0]);
-			}	
+			String[] split = g.split("=");		
+			usernames.add(split[0]);	
 		}
 		return usernames;			
 	}
