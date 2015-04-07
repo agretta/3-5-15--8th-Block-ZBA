@@ -21,7 +21,7 @@ public class FrontEnd {
 
 	private BackEnd backEnd;
 	public FrontEnd () {
-		
+		backEnd = new BackEnd(new File("messages"));
 		frame = new JFrame();
 		frame.setBounds(100, 100, 450, 380);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
