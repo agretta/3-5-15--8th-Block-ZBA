@@ -64,7 +64,6 @@ public class BackEnd {	//done
 			String[] split = g.split("=");
 			for (String x : usernames)
 			{ 	
-				if (x.equals(split[0]));
 					usernames.add(split[0]);
 			}	
 		}
