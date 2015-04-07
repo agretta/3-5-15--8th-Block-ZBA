@@ -63,6 +63,7 @@ public class front {
 		frame.getContentPane().add(comboBox);
 		
 		txtAddUsername = new JTextField();
+		txtAddUsername.setText("T");
 		txtAddUsername.setBounds(188, 130, 93, 20);
 		frame.getContentPane().add(txtAddUsername);
 		txtAddUsername.setColumns(10);

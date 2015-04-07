@@ -21,6 +21,8 @@ public class FrontEnd {
 
 	private BackEnd backEnd;
 	public FrontEnd () {
+		
+		
 		backEnd = new BackEnd(new File("messages"));
 		frame = new JFrame();
 		frame.setBounds(100, 100, 450, 380);
@@ -80,9 +82,9 @@ public class FrontEnd {
 		btnAdd.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				comboBox_1.addItem(txtAddUsername.getText());
-				backEnd.addMessage(txtAddUsername.getText(), " ");
-				comboBox_2.addItem(txtAddUsername.getText());
+				comboBox_1.addItem(txtTypeTheUsername.getText());
+				backEnd.addMessage(txtTypeTheUsername.getText(), " ");
+				comboBox_2.addItem(txtTypeTheUsername.getText());
 			}
 		});
 		
@@ -90,7 +92,7 @@ public class FrontEnd {
 		btnAddTheMessage.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				
-				backEnd.addMessage(comboBox_1.getItemAt(comboBox_1.getSelectedIndex()), txtTypeTheMessage.getText());
+				backEnd.addMessage(comboBox_1.getItemAt(comboBox_1.getSelectedIndex()), txtUsername.getText());
 			}
 		});
 		btnAdd.setBounds(323, 64, 89, 23);
