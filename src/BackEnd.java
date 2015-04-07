@@ -45,8 +45,7 @@ public class BackEnd {	//done
 		
 	}
 	public void addMessage(String username, String msg)	//done
-	{
-		
+	{	
 		encoder.write(username + "=" + msg);
 		
 		
@@ -63,35 +62,13 @@ public class BackEnd {	//done
 		for (String g : allMessages)
 		{
 			String[] split = g.split("=");
-			
-			
 			for (String x : usernames)
-			{ 
-				
+			{ 	
 				if (x.equals(split[0]) == false);
 					usernames.add(split[0]);
-			}
-			
+			}	
 		}
-		
-		
-		return usernames;	
-		
-		
-		
-		
-		
+		return usernames;			
 	}
-public static void main(String args[]){
-		
-		
-	}
-	
-	
-	
-	
-	
-	
-	
 
 }
