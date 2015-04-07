@@ -1,112 +1,162 @@
+import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.io.File;
+import java.util.List;
 
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JScrollPane;
 import javax.swing.JTextField;
-
+import javax.swing.JTextPane;
 
 
 public class FrontEnd {
 	
-	private JFrame frame;
-	private JTextField txtTypeTheUsername;
-	private JTextField txtAddUsername;
-	private JTextField txtTypeTheMessage;
-	private JTextField txtUsername;
-	private JTextField txtMessage;
 
-	private BackEnd backEnd;
-	public FrontEnd () {
+
+	private JFrame frmZba;
+	private JTextField userNameField;
+	private JTextField messageField;
+	private BackEnd back;
+	public FrontEnd(){
 		
+		//Frame and BackEnd Implementation
+		File f = new File("Message_Storage");
+		back = new BackEnd(f);
+		frmZba = new JFrame();
+		frmZba.setTitle("ZBA");
+		frmZba.setBounds(100, 100, 600, 511);
+		frmZba.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frmZba.getContentPane().setLayout(null);
+		frmZba.setPreferredSize(new Dimension(600,511));
+		frmZba.setResizable(false);
+		frmZba.getContentPane().setBackground(new Color(202,225,255));
+		//labels
+		JLabel lblMessage = new JLabel("Message Search");
+		lblMessage.setBounds(134, 227, 46, 14);
+		lblMessage.setSize(new Dimension(120,14));
+		frmZba.getContentPane().add(lblMessage);
 		
-		backEnd = new BackEnd(new File("messages"));
-		frame = new JFrame();
-		frame.setBounds(100, 100, 450, 380);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.getContentPane().setLayout(null);
+		JLabel label = new JLabel("Insert New User");
+		label.setBounds(77, 37, 46, 14);
+		label.setSize(new Dimension(120,14));
 		
-		JLabel lblUsername = new JLabel("Username");
-		lblUsername.setBounds(42, 31, 76, 23);
-		frame.getContentPane().add(lblUsername);
+		JLabel lbMessagePrompt = new JLabel("Insert new Message");
+		lbMessagePrompt.setBounds(76, 109, 46, 14);
+		frmZba.getContentPane().add(lbMessagePrompt);
+		lbMessagePrompt.setSize(120,14);
+
+		frmZba.getContentPane().add(label);
+		//Buttons
+
+		JButton btnAddUser = new JButton("Add User");
+		btnAddUser.setBounds(191, 59, 89, 23);
+		frmZba.getContentPane().add(btnAddUser);
 		
-		txtTypeTheUsername = new JTextField();
-		txtTypeTheUsername.setBounds(42, 65, 120, 20);
-		frame.getContentPane().add(txtTypeTheUsername);
-		txtTypeTheUsername.setColumns(10);
+		JButton btnAddMessage = new JButton("Add Message");
+		btnAddMessage.setBounds(305, 133, 117, 23);
+		frmZba.getContentPane().add(btnAddMessage);
 		
-		JComboBox comboBox = new JComboBox();
-		comboBox.setBounds(134, 65, 28, 20);
-		frame.getContentPane().add(comboBox);
+		JButton searchButton = new JButton("Search");
+		searchButton.setBounds(305, 299, 117, 23);
+		frmZba.getContentPane().add(searchButton);
 		
-		txtAddUsername = new JTextField();
-		txtAddUsername.setBounds(188, 130, 93, 20);
-		frame.getContentPane().add(txtAddUsername);
-		txtAddUsername.setColumns(10);
-		
-		
-		
-		
-		JLabel lblMessage = new JLabel("Message");
-		lblMessage.setBounds(42, 102, 62, 14);
-		frame.getContentPane().add(lblMessage);
-		
-		
-		
-		
-		JLabel lblGetMessage = new JLabel("Get Message");
-		lblGetMessage.setBounds(42, 173, 120, 14);
-		frame.getContentPane().add(lblGetMessage);
-		
-		JComboBox<String > comboBox_1 = new JComboBox<String >();
-		comboBox_1.setBounds(42, 210, 120, 20);
-		frame.getContentPane().add(comboBox_1);
-		
-		txtMessage = new JTextField();
-		txtMessage.setBounds(42, 252, 370, 51);
-		frame.getContentPane().add(txtMessage);
-		txtMessage.setColumns(10);
-		
-		JComboBox<String > comboBox_2 = new JComboBox<String >();
-		comboBox_2.setBounds(42, 130, 120, 20);
-		frame.getContentPane().add(comboBox_2);
-		
-		JComboBox comboBox_3 = new JComboBox();
-		comboBox_3.setBounds(134, 210, 28, 20);
-		frame.getContentPane().add(comboBox_3);
-		
-		JButton btnAdd = new JButton("Add");
-		btnAdd.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				
-				comboBox_1.addItem(txtTypeTheUsername.getText());
-				backEnd.addMessage(txtTypeTheUsername.getText(), " ");
-				comboBox_2.addItem(txtTypeTheUsername.getText());
+		//TextAreas
+		userNameField = new JTextField();
+		userNameField.setBounds(77, 60, 86, 20);
+		frmZba.getContentPane().add(userNameField);
+		userNameField.setColumns(10);
+		userNameField.addKeyListener(new KeyListener(){
+			public void keyPressed(KeyEvent arg0) {
+				if(arg0.equals(KeyEvent.VK_ENTER)){
+					btnAddUser.doClick();
+				}
 			}
+			public void keyReleased(KeyEvent arg0) {				}
+			public void keyTyped(KeyEvent arg0) {}	
 		});
+				
+		messageField = new JTextField();
+		messageField.setBounds(191, 134, 86, 20);
+		frmZba.getContentPane().add(messageField);
+		messageField.setColumns(10);
+		messageField.addKeyListener(new KeyListener(){
+			public void keyPressed(KeyEvent e) {
+				if(e.equals(KeyEvent.VK_ENTER)){
+					btnAddMessage.doClick();
+				}
+				
+			}
+			public void keyReleased(KeyEvent e) {}
+			public void keyTyped(KeyEvent e) {}
+				});
 		
-		JButton btnAddTheMessage = new JButton("Add message");
-		btnAddTheMessage.addActionListener(new ActionListener() {
+		
+		JScrollPane scrollPane = new JScrollPane();
+		scrollPane.setBounds(77, 252, 203, 152);
+		frmZba.getContentPane().add(scrollPane);
+
+		JTextPane textPane = new JTextPane();
+		textPane.setEditable(false);
+		textPane.setBounds(77, 252, 203, 152);
+		frmZba.getContentPane().add(textPane);
+		scrollPane.setViewportView(textPane);
+		
+		//ComboBoxes
+		List<String> s = back.getUsers();
+		
+		JComboBox<String> comboBox = new JComboBox<String>();
+		comboBox.setToolTipText("Find User");
+		comboBox.setBounds(77, 134, 86, 20);
+		
+		frmZba.getContentPane().add(comboBox);
+		
+		JComboBox<String> nameMessage = new JComboBox<String>();
+		nameMessage.setToolTipText("Find User");
+		nameMessage.setBounds(305, 252, 117, 20);
+		frmZba.getContentPane().add(nameMessage);
+		
+		for(String name : s){
+			comboBox.addItem(name);
+			nameMessage.addItem(name);
+		} 
+		//Listeners
+		
+		btnAddUser.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				
-				backEnd.addMessage(comboBox_1.getItemAt(comboBox_1.getSelectedIndex()), txtUsername.getText());
+				comboBox.addItem(userNameField.getText());
+				nameMessage.addItem(userNameField.getText());
+				back.addMessage(userNameField.getText(), "\t");
 			}
 		});
-		btnAdd.setBounds(323, 64, 89, 23);
-		frame.getContentPane().add(btnAdd);
-		btnAddTheMessage.setBounds(304, 129, 120, 23);
-		frame.getContentPane().add(btnAddTheMessage);
-		frame.pack();
-		frame.setVisible(true);
+		
+		btnAddMessage.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0){
+				back.addMessage(comboBox.getItemAt(comboBox.getSelectedIndex()), messageField.getText());
+			}
+		});
+		
+		searchButton.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e) {
+				List<String> messages = back.getMessages(((String)nameMessage.getSelectedItem()));
+				String s = "";
+				for(String message : messages)
+					if(!message.equals(" "))
+						s += message + "\n";
+				textPane.setText(s);				
+			}
+		});
+		//Packing and Displaying
+		frmZba.pack();
+		frmZba.setVisible(true);
 	}
-
-
+	
 }
-//	backEnd.addMessage(comboBox_1.getItemAt(comboBox_1.getSelectedIndex()), txtTypeTheMessage.getText());
-
-//comboBox_1.addItem(txtAddUsername.getText());
-//backEnd.addMessage(txtAddUsername.getText(), " ");
-//comboBox_2.addItem(txtAddUsername.getText());
