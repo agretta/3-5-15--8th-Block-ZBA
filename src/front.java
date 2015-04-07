@@ -39,6 +39,7 @@ public class front {
 	 */
 	public front() {
 		initialize();
+		
 	}
 
 	/**
@@ -55,7 +56,6 @@ public class front {
 		frame.getContentPane().add(lblUsername);
 		
 		txtTypeTheUsername = new JTextField();
-		txtTypeTheUsername.setText("Type the username");
 		txtTypeTheUsername.setBounds(42, 65, 120, 20);
 		frame.getContentPane().add(txtTypeTheUsername);
 		txtTypeTheUsername.setColumns(10);
@@ -65,12 +65,17 @@ public class front {
 		frame.getContentPane().add(comboBox);
 		
 		txtAddUsername = new JTextField();
-		txtAddUsername.setText("Add username");
-		txtAddUsername.setBounds(195, 65, 93, 20);
+		txtAddUsername.setBounds(188, 130, 93, 20);
 		frame.getContentPane().add(txtAddUsername);
 		txtAddUsername.setColumns(10);
 		
 		JButton btnAdd = new JButton("Add");
+		btnAdd.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				
+			}
+		});
 		btnAdd.setBounds(323, 64, 89, 23);
 		frame.getContentPane().add(btnAdd);
 		
@@ -79,7 +84,6 @@ public class front {
 		frame.getContentPane().add(lblMessage);
 		
 		txtTypeTheMessage = new JTextField();
-		txtTypeTheMessage.setText("Type the message");
 		txtTypeTheMessage.setBounds(42, 130, 120, 20);
 		frame.getContentPane().add(txtTypeTheMessage);
 		txtTypeTheMessage.setColumns(10);
@@ -89,7 +93,7 @@ public class front {
 			public void actionPerformed(ActionEvent arg0) {
 			}
 		});
-		btnAddTheMessage.setBounds(197, 129, 120, 23);
+		btnAddTheMessage.setBounds(304, 129, 120, 23);
 		frame.getContentPane().add(btnAddTheMessage);
 		
 		JLabel lblGetMessage = new JLabel("Get Message");
@@ -97,7 +101,6 @@ public class front {
 		frame.getContentPane().add(lblGetMessage);
 		
 		txtUsername = new JTextField();
-		txtUsername.setText("Username");
 		txtUsername.setBounds(42, 210, 120, 20);
 		frame.getContentPane().add(txtUsername);
 		txtUsername.setColumns(10);
@@ -107,9 +110,16 @@ public class front {
 		frame.getContentPane().add(comboBox_1);
 		
 		txtMessage = new JTextField();
-		txtMessage.setText("Message");
 		txtMessage.setBounds(42, 252, 370, 51);
 		frame.getContentPane().add(txtMessage);
 		txtMessage.setColumns(10);
+		
+		JComboBox comboBox_2 = new JComboBox();
+		comboBox_2.setBounds(134, 130, 28, 20);
+		frame.getContentPane().add(comboBox_2);
+		
+		JComboBox comboBox_3 = new JComboBox();
+		comboBox_3.setBounds(134, 210, 28, 20);
+		frame.getContentPane().add(comboBox_3);
 	}
 }
