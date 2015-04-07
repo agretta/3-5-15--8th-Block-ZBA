@@ -12,11 +12,12 @@ import com.sun.xml.internal.bind.v2.schemagen.xmlschema.List;
 public class BackEnd {
 	public File z;
 	Scanner scanner;
+	private Encoder encoder;
 	
 	public BackEnd (File f)
 	{
 		
-		Encoder encoder = new Encoder(f);
+		encoder = new Encoder(f);
 		z = f;
 		
 	}
