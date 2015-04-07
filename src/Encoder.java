@@ -3,6 +3,7 @@ import java.io.*;
 public class Encoder {
 	
 	private File myFile;
+	//Key for the obf	uscation
 	private static String source=" abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789\t=";
 	private static String target=" zyxwvutsrqponmlkjihgfedcbaQ9A8ZWS7XEDC6RFVT5GBY4HNU3J2MI1KO0LP\t*";
 	
