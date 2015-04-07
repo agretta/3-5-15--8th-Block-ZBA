@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ASCII"?>
 <application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_1RFPgdl1EeSHWsfsE-JusA" elementId="org.eclipse.e4.legacy.ide.application" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_1RFPgtl1EeSHWsfsE-JusA" bindingContexts="_1RFPhNl1EeSHWsfsE-JusA">
-  <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;workbench>&#xD;&#xA;&lt;mruList>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.ide.FileStoreEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;Driver.java&quot; tooltip=&quot;H:\Comp Sci project\3-5-15--8th-Block-ZBA\src\Driver.java&quot;>&#xD;&#xA;&lt;persistable uri=&quot;file:/H:/Comp%20Sci%20project/3-5-15--8th-Block-ZBA/src/Driver.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;/mruList>&#xD;&#xA;&lt;/workbench>"/>
+  <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;workbench>&#xD;&#xA;&lt;mruList>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.ide.FileStoreEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;BackEnd.java&quot; tooltip=&quot;H:\Comp Sci project\3-5-15--8th-Block-ZBA\src\BackEnd.java&quot;>&#xD;&#xA;&lt;persistable uri=&quot;file:/H:/Comp%20Sci%20project/3-5-15--8th-Block-ZBA/src/BackEnd.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.ide.FileStoreEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;Driver.java&quot; tooltip=&quot;H:\Comp Sci project\3-5-15--8th-Block-ZBA\src\Driver.java&quot;>&#xD;&#xA;&lt;persistable uri=&quot;file:/H:/Comp%20Sci%20project/3-5-15--8th-Block-ZBA/src/Driver.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;/mruList>&#xD;&#xA;&lt;/workbench>"/>
   <tags>activeSchemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
   <tags>ModelMigrationProcessor.001</tags>
   <children xsi:type="basic:TrimmedWindow" xmi:id="_1RFPgtl1EeSHWsfsE-JusA" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_1iVXktl1EeSHWsfsE-JusA" label="%trimmedwindow.label.eclipseSDK" x="100" y="100" width="1024" height="768">
@@ -144,13 +144,19 @@
       <tags>categoryTag:Help</tags>
     </sharedElements>
     <sharedElements xsi:type="advanced:Area" xmi:id="_1pVXcNl1EeSHWsfsE-JusA" elementId="org.eclipse.ui.editorss" selectedElement="_1pVXcdl1EeSHWsfsE-JusA">
-      <children xsi:type="basic:PartStack" xmi:id="_1pVXcdl1EeSHWsfsE-JusA" elementId="org.eclipse.e4.primaryDataStack" selectedElement="_8NcksNl1EeSHWsfsE-JusA">
+      <children xsi:type="basic:PartStack" xmi:id="_1pVXcdl1EeSHWsfsE-JusA" elementId="org.eclipse.e4.primaryDataStack" selectedElement="_QIsBcN1jEeSrbP5MTi77hA">
         <tags>newtablook</tags>
         <tags>org.eclipse.e4.primaryDataStack</tags>
         <tags>EditorStack</tags>
         <tags>active</tags>
         <children xsi:type="basic:Part" xmi:id="_8NcksNl1EeSHWsfsE-JusA" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="Driver.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.gif" closeable="true">
           <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;Driver.java&quot; partName=&quot;Driver.java&quot; title=&quot;Driver.java&quot; tooltip=&quot;H:\Comp Sci project\3-5-15--8th-Block-ZBA\src\Driver.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.ide.FileStoreEditorInputFactory&quot; uri=&quot;file:/H:/Comp%20Sci%20project/3-5-15--8th-Block-ZBA/src/Driver.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;126&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <tags>Editor</tags>
+          <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
+          <tags>removeOnHide</tags>
+        </children>
+        <children xsi:type="basic:Part" xmi:id="_QIsBcN1jEeSrbP5MTi77hA" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="BackEnd.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.gif" closeable="true">
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;BackEnd.java&quot; partName=&quot;BackEnd.java&quot; title=&quot;BackEnd.java&quot; tooltip=&quot;H:\Comp Sci project\3-5-15--8th-Block-ZBA\src\BackEnd.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.ide.FileStoreEditorInputFactory&quot; uri=&quot;file:/H:/Comp%20Sci%20project/3-5-15--8th-Block-ZBA/src/BackEnd.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;121&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
           <tags>removeOnHide</tags>
@@ -266,7 +272,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_1jOvcNl1EeSHWsfsE-JusA" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_9mDEcdl3EeSPZdWpEl5Tww" elementId="print" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" enabled="false" command="_1RdqJdl1EeSHWsfsE-JusA"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_OmE_NN1jEeSrbP5MTi77hA" elementId="print" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" enabled="false" command="_1RdqJdl1EeSHWsfsE-JusA"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_1jOvcdl1EeSHWsfsE-JusA" elementId="additions" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -290,7 +296,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_1jPWgNl1EeSHWsfsE-JusA" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_9mH88Nl3EeSPZdWpEl5Tww" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_1RccRdl1EeSHWsfsE-JusA"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_OmIpkN1jEeSrbP5MTi77hA" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_1RccRdl1EeSHWsfsE-JusA"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_1jPWgdl1EeSHWsfsE-JusA" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>
